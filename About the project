@@ -1,0 +1,51 @@
+About the Project:
+
+Power BI Sales Dashboard:
+This project focuses on building a Sales Forecasting Dashboard using Power BI to analyze and forecast sales for a retail superstore. The primary goal was to utilize data analysis techniques, particularly time series analysis, to derive valuable insights and accurate sales forecasts. These insights aim to drive strategic business decisions, enhance customer satisfaction, and support the supermarket's growth and efficiency.
+
+Project Breakdown:
+
+1.Dashboard Creation:
+
+Objective: Designed a user-friendly and visually appealing dashboard with key performance indicators (KPIs) and interactive visualizations, allowing users to explore data at various levels of granularity.
+Visuals: Included clustered bar charts, stacked area charts, a map, donut charts, slicers, and KPIs to present sales and profit data comprehensively.
+
+2.Data Preparation:
+
+Import and Cleaning: Imported data from a CSV file into Power BI. Cleaned and transformed the data using Power Query, including replacing invalid entries and removing unnecessary columns.
+
+Data Analysis: Conducted an in-depth analysis of sales data to provide insights into sales strategies, customer preferences, and profitability across different segments.
+
+3.Sales Forecasting:
+
+Forecasting Method: Applied time series forecasting using Power BI's forecasting tool to predict sales trends for the next 15 days. The forecasting model was adjusted to ensure accurate predictions by aggregating and summing data to address issues with duplicate dates.
+
+Visualization: Utilized line charts to visualize the sales forecasts, complemented by sliders and bar charts for deeper analysis.
+
+4.Actionable Insights:
+
+Payment Preferences: Cash on delivery was preferred by 43% of customers, followed by online payments and card payments.
+
+Regional Sales: The West region led with 33% of total sales, with December and October being the most profitable months.
+
+Segment and State Performance: The consumer segment topped sales, with California contributing 31% to total sales, followed by New York and Texas.
+
+Project Learnings
+
+1.Time Series Analysis: Applied specialized techniques to forecast future sales trends, which are crucial for strategic planning.
+
+2.Data Analysis and Visualization: Gained expertise in cleaning and transforming data, as well as creating interactive dashboards that provide actionable insights.
+
+3.Business Impact: The insights derived from this project are intended to optimize sales strategies, improve customer targeting, and enhance overall business performance.
+
+DAX Formulas Used:
+
+1.Average Delivery Time:
+
+AvgDelivery = DATEDIFF('superstore_sales'[order_date], 'superstore_sales'[ship_date], DAY)
+
+2.Sales Forecast Calculation:
+
+SalesForecast = SUMMARIZE('superstore_sales', 'superstore_sales'[order_date], "Total Sales", SUM('superstore_sales'[sales]))
+
+
